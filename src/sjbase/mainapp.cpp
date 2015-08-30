@@ -258,7 +258,7 @@ bool SjMainApp::OnInit()
 	s_logGui = new SjLogGui();
 
 	// log silverjuke and platform version and release information
-	wxLogInfo(wxT("Silverjuke %s Rev. %i started (%i Bit%s%s%s on %s (%i Bit), %s, sqlite %s)"),
+	wxLogInfo(wxT("Silverjuke %s Rev. %i started (%zi Bit%s%s%s on %s (%i Bit), %s, sqlite %s)"),
 	          SJ_VERSION_STR, SJ_VERSION_REVISION, sizeof(void*)*8,
 	          #ifdef wxUSE_UNICODE
 	              wxT(" Unicode"),
@@ -634,4 +634,3 @@ void SjMainApp::FatalError()
 	// show message that we will quite now
 	::wxLogFatalError(wxString::Format(/*n/t, maybe locale error?*/wxT("We'll terminating %s now.\nSorry, there's nothing we can do."), SJ_PROGRAM_NAME));
 }
-
