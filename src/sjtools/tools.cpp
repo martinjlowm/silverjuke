@@ -196,7 +196,7 @@ void SjTools::InitCrashPrecaution()
 	unsigned long crc = Crc32AddString(Crc32Init(), wxGetUserId()+m_instance);
 
 	m_crashInfoFileName = m_cache.AddToUnmanagedTemp(
-	                          wxString::Format(SJ_TEMP_PREFIX wxT("%08x-cp")
+	                          wxString::Format(SJ_TEMP_PREFIX wxT("%08lx-cp")
 								#ifdef __WXDEBUG__
 	                                  wxT("-db")
 								#endif
