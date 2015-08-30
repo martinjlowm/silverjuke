@@ -341,7 +341,7 @@ void wxSqltDb::SetSync(long state, bool saveInDb)
 		sql.Query(wxString::Format(wxT("PRAGMA synchronous=%li;"), state));
 		if( saveInDb )
 		{
-			sql.Query(wxString::Format(wxT("PRAGMA default_synchronous=%i;"), state));
+			sql.Query(wxString::Format(wxT("PRAGMA default_synchronous=%li;"), state));
 		}
 	}
 }
