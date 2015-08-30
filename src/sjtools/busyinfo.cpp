@@ -214,7 +214,7 @@ bool SjBusyInfo::Set__(const wxString& object, bool forceUpdateForLongOp)
 		if( !object.IsEmpty() )
 		{
 			m_objectCount++;
-			wxLogDebug(wxT("m_objectCount=%li on SjBusyInfo::Set__(%s)"), m_objectCount, object.c_str());
+			wxLogDebug(wxT("m_objectCount=%lu on SjBusyInfo::Set__(%s)"), m_objectCount, object.c_str());
 
 			if( forceUpdateForLongOp || currMs >= m_nextUpdateMs )
 			{
